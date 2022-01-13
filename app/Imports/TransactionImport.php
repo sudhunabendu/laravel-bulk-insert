@@ -12,21 +12,6 @@ use Maatwebsite\Excel\Concerns\ToCollection;
 
 class TransactionImport implements ToCollection, WithHeadingRow
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    // public function model(array $row)
-    // {
-    //     return new Transaction([
-    //         'user_id'=>1,
-    //         'amount'=>$row['amount'],
-    //         'description'=>$row['description'],
-    //     ]);
-    // }
-
-
     public function collection(Collection $rows)
     {
         foreach ($rows as $row)

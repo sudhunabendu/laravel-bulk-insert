@@ -12,7 +12,7 @@ class TransactionController extends Controller
 {
     public function index(){
         $data = Transaction::all();
-        return view('import',['data'=>$data]);
+        return view('import',compact('data'));
     }
 
     public function store(){

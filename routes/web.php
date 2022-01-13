@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\ProductController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +23,6 @@ Route::get('/', function () {
 
 Route::get('/import',[TransactionController::class,'index']);
 Route::post('/imports',[TransactionController::class,'store'])->name('imports');
+
+Route::get('/products',[ProductController::class,'index']);
+Route::post('/imports_products',[ProductController::class,'store'])->name('imports_products');
